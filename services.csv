@@ -1,0 +1,6 @@
+Hostname,Port,Protocol,STARTTLS,SNI,Version
+google.com,443,tls,FALSE,FALSE,tls1
+slashdot.org,443,tls,FALSE,FALSE
+1.1.1.1,443,tls,FALSE,cloudflare-dns.com
+pkiaas.io,443,tls,FALSE,TRUE
+smtp-relay.gmail.com,25,smtp,TRUE,FALSE

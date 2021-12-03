@@ -1,0 +1,21 @@
+{
+  "name": "cert-monitor",
+  "version": "1.0.0",
+  "description": "Monitors for cert expiration and changes",
+  "main": "index.js",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "moment": "^2.24.0",
+    "node-openssl-cert": "^0.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.smhplus.org:81/ls12943/cert-monitor.git"
+  },
+  "author": "Lyas Spiehler",
+  "license": "ISC"
+}
