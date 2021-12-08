@@ -78,7 +78,12 @@ var runOpenSSLCommand = function(cmd, callback) {
             exitcode: code
         }
         if (code != 0) {
-            callback(stderrbuff.join(), out);
+            if(stdoutbuff.join('').toString().indexOf('Verify return code: ') >= 0 ) {
+                //console.log('true');
+                callback(false, out);
+            } else {
+                callback(stderrbuff.join(), out);
+            }
         } else {
             callback(false, out);
         }
@@ -254,6 +259,7 @@ function servicesLoop(index, callback) {
         }
         processService(services[index], function(err, resp) {
             if(err) {
+                console.log(err);
                 console.error('Failed to download certificate on ' + services[index].Hostname + ' port ' + services[index].Port + '\r\n');
             } else {
                 evalCert(resp, function(err) {
